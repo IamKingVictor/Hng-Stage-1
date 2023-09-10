@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT = 8080;
+const PORT = 5500;
 
 //handle default get request
 app.get('/', (req, res) => {
@@ -24,9 +24,8 @@ app.get('/api', (req, res) => {
 	// get the information needed in the response
 	const current_day = new Date().toLocaleString('en-US', { weekday: 'long' })
 	const utc_time = new Date().toISOString().slice(0, 19) + 'Z'
-	const githubFileUrl = 'https://github.com/ewomatc/hngx-stage-one/blob/main/app.js'
-	const githubRepoUrl = 'https://github.com/ewomatc/hngx-stage-one'
-
+	const githubFileUrl = 'https://github.com/IamKingVictor/Hng-Stage-1/blob/main/app.js'
+	const githubRepoUrl = 'https://github.com/IamKingVictor/Hng-Stage-1.git'
 	// send json response
 	res.status(200).json({
 		slack_name,
